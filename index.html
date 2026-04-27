@@ -455,8 +455,8 @@ footer{
   .photo-break-item{height:260px}
   .course{grid-template-columns:1fr;padding:5rem 1.5rem;gap:3rem}
   .waitlist{padding:5rem 1.5rem}
-  .waitlist-email-row{flex-direction:column}
-  .waitlist-input{border-right:1px solid rgba(255,255,255,0.1)}
+  .waitlist-email-row{flex-direction:column;margin-bottom:0.75rem!important}
+  .waitlist-input{border-right:1px solid rgba(255,255,255,0.1)!important;border-left:1px solid rgba(255,255,255,0.1)!important;flex:1 1 auto!important}
   .waitlist-checks{flex-direction:column;align-items:center;gap:1rem}
   footer{flex-direction:column;gap:0.75rem;text-align:center;padding:1.5rem}
 }
@@ -669,19 +669,21 @@ footer{
   </h2>
   <p class="waitlist-sub">Be first to know when the book and course are available. Tell us what you're interested in and we'll keep you in the loop.</p>
   <div class="waitlist-form-wrap">
-    <form action="https://app.kit.com/forms/9376020/subscriptions" method="post" id="wl-form">
+    <form action="https://app.kit.com/forms/9376020/subscriptions" method="post" accept-charset="UTF-8" id="wl-form">
+      <input type="hidden" name="utf8" value="&#x2713;">
       <div class="waitlist-checks">
         <label class="check-label">
-          <input type="checkbox" name="tags[]" value="book" checked>
+          <input type="checkbox" name="fields[book]" value="1" checked>
           The Book
         </label>
         <label class="check-label">
-          <input type="checkbox" name="tags[]" value="course" checked>
+          <input type="checkbox" name="fields[course]" value="1" checked>
           The Course
         </label>
       </div>
-      <div class="waitlist-email-row">
-        <input type="email" name="email_address" class="waitlist-input" id="wl-email" placeholder="your@email.com" required>
+      <div class="waitlist-email-row" style="margin-bottom:0.75rem">
+        <input type="text" name="fields[first_name]" class="waitlist-input" placeholder="First name" style="border-right:1px solid rgba(255,255,255,0.1);flex:0 0 38%">
+        <input type="email" name="email_address" class="waitlist-input" id="wl-email" placeholder="your@email.com" required style="border-left:none;border-right:none">
         <button type="submit" class="waitlist-btn">Notify Me</button>
       </div>
       <p class="waitlist-note">No spam. Unsubscribe any time.</p>
@@ -696,34 +698,9 @@ footer{
 
 <script>
 document.getElementById('wl-form').addEventListener('submit', function(e) {
-  e.preventDefault();
-  const form = e.target;
-  const btn = form.querySelector('button');
-  const input = document.getElementById('wl-email');
-  const checks = form.querySelectorAll('input[type=checkbox]');
-  const data = new FormData(form);
-
+  const btn = e.target.querySelector('button');
   btn.textContent = 'Sending...';
   btn.disabled = true;
-
-  fetch('https://app.kit.com/forms/9376020/subscriptions', {
-    method: 'POST',
-    body: data,
-    headers: { 'Accept': 'application/json' }
-  })
-  .then(function(res) {
-    btn.textContent = 'Done';
-    btn.style.background = '#4a9e6a';
-    btn.style.borderColor = '#4a9e6a';
-    input.value = '';
-    input.placeholder = "You're on the list. Check your email.";
-    input.disabled = true;
-    checks.forEach(function(c) { c.disabled = true; });
-  })
-  .catch(function() {
-    btn.textContent = 'Try again';
-    btn.disabled = false;
-  });
 });
 </script>
 </body>
