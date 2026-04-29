@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Mini Reset: The Confidence Reset</title>
+<meta name="description" content="A free five-minute practice from The Confidence Reset by Christopher Murray. Join the list and get instant access.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream:       #F5F2EC;
+    --cream-mid:   #EDE9E1;
+    --cream-dark:  #E4DFD5;
+    --ink:         #0C0C0C;
+    --ink-mid:     #3A3734;
+    --ink-light:   #8C8680;
+    --blue:        #6BA3BE;
+    --blue-dark:   #2B5F7E;
+    --blue-pale:   #EBF3F8;
+    --rule:        rgba(12,12,12,0.09);
+    --rule-strong: rgba(12,12,12,0.18);
+  }
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Manrope', sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 64px;
+    background: rgba(245,242,236,0.94);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 56px;
+    z-index: 100;
+  }
+
+  .nav-logo {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  .nav-cta {
+    display: inline-block;
+    background: var(--blue);
+    color: white;
+    font-family: 'Manrope', sans-serif;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 10px 22px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: opacity 0.15s;
+  }
+
+  .nav-cta:hover { opacity: 0.85; }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--ink);
+    padding: 160px 56px 100px 56px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  .hero-left {}
+
+  .hero-eyebrow {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 24px;
+  }
+
+  .hero-title {
+    font-size: 72px;
+    font-weight: 900;
+    letter-spacing: -3.5px;
+    line-height: 0.92;
+    color: var(--cream);
+    margin-bottom: 28px;
+  }
+
+  .hero-title .accent { color: var(--blue); }
+
+  .hero-rule {
+    width: 40px;
+    height: 2px;
+    background: var(--blue);
+    margin-bottom: 28px;
+  }
+
+  .hero-sub {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.75;
+    color: rgba(245,242,236,0.55);
+    margin-bottom: 0;
+    max-width: 380px;
+  }
+
+  .hero-sub strong {
+    color: rgba(245,242,236,0.85);
+    font-weight: 600;
+  }
+
+  /* ── HERO FORM CARD ── */
+  .hero-right {}
+
+  .form-card {
+    background: var(--cream);
+    padding: 48px;
+  }
+
+  .form-card-label {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 12px;
+  }
+
+  .form-card-title {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: var(--ink);
+    margin-bottom: 8px;
+    line-height: 1.2;
+  }
+
+  .form-card-sub {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--ink-light);
+    line-height: 1.7;
+    margin-bottom: 32px;
+  }
+
+  .form-field {
+    margin-bottom: 16px;
+  }
+
+  .form-field label {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--ink-mid);
+    margin-bottom: 8px;
+  }
+
+  .form-field input {
+    width: 100%;
+    height: 48px;
+    padding: 0 16px;
+    border: 1px solid var(--rule-strong);
+    background: white;
+    font-family: 'Manrope', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--ink);
+    outline: none;
+    transition: border-color 0.15s;
+    border-radius: 0;
+    -webkit-appearance: none;
+  }
+
+  .form-field input:focus {
+    border-color: var(--blue);
+  }
+
+  .form-field input::placeholder {
+    color: var(--ink-light);
+  }
+
+  .form-submit {
+    width: 100%;
+    height: 52px;
+    background: var(--blue);
+    color: white;
+    font-family: 'Manrope', sans-serif;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: opacity 0.15s;
+  }
+
+  .form-submit:hover { opacity: 0.85; }
+
+  .form-privacy {
+    font-size: 11px;
+    color: var(--ink-light);
+    text-align: center;
+    margin-top: 16px;
+    line-height: 1.6;
+  }
+
+  /* ── WHAT IS IT ── */
+  .what {
+    padding: 100px 56px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .what-left {}
+
+  .section-label {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 16px;
+  }
+
+  .section-title {
+    font-size: 38px;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    line-height: 1.05;
+    color: var(--ink);
+    margin-bottom: 28px;
+  }
+
+  .body-text {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--ink-mid);
+    line-height: 1.85;
+    margin-bottom: 20px;
+  }
+
+  .body-text:last-child { margin-bottom: 0; }
+
+  .what-right {
+    padding-top: 8px;
+  }
+
+  /* ── WHAT'S INSIDE ── */
+  .inside-item {
+    padding: 28px 0;
+    border-bottom: 1px solid var(--rule);
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: 20px;
+    align-items: start;
+  }
+
+  .inside-item:first-child { border-top: 1px solid var(--rule); }
+
+  .inside-num {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: var(--blue);
+    padding-top: 2px;
+  }
+
+  .inside-text strong {
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+
+  .inside-text p {
+    font-size: 14px;
+    color: var(--ink-light);
+    line-height: 1.7;
+  }
+
+  /* ── ABOUT SECTION ── */
+  .about {
+    background: var(--cream-mid);
+    padding: 100px 56px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .about-quote {
+    font-size: 26px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: var(--ink);
+    letter-spacing: -0.3px;
+    margin-bottom: 32px;
+  }
+
+  .about-quote strong {
+    font-weight: 800;
+    color: var(--blue-dark);
+  }
+
+  .about-meta {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--ink-light);
+  }
+
+  .about-right {}
+
+  .about-right .body-text {
+    margin-bottom: 18px;
+  }
+
+  /* ── PROOF STRIP ── */
+  .proof {
+    background: var(--ink);
+    padding: 80px 56px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    border-bottom: 1px solid rgba(245,242,236,0.08);
+  }
+
+  .proof-item {
+    padding: 0 40px;
+    border-right: 1px solid rgba(245,242,236,0.08);
+  }
+
+  .proof-item:first-child { padding-left: 0; }
+  .proof-item:last-child { border-right: none; }
+
+  .proof-num {
+    font-size: 48px;
+    font-weight: 900;
+    letter-spacing: -2px;
+    color: var(--cream);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .proof-num span { color: var(--blue); }
+
+  .proof-label {
+    font-size: 13px;
+    font-weight: 400;
+    color: rgba(245,242,236,0.5);
+    line-height: 1.6;
+  }
+
+  /* ── BOTTOM CTA ── */
+  .bottom-cta {
+    padding: 100px 56px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .bottom-cta-left {}
+
+  .bottom-cta-right {}
+
+  .inline-form { display: flex; gap: 0; }
+
+  .inline-form input {
+    flex: 1;
+    height: 52px;
+    padding: 0 20px;
+    border: 1px solid var(--rule-strong);
+    border-right: none;
+    background: white;
+    font-family: 'Manrope', sans-serif;
+    font-size: 15px;
+    color: var(--ink);
+    outline: none;
+    border-radius: 0;
+    -webkit-appearance: none;
+    transition: border-color 0.15s;
+  }
+
+  .inline-form input:focus { border-color: var(--blue); }
+  .inline-form input::placeholder { color: var(--ink-light); }
+
+  .inline-form button {
+    height: 52px;
+    padding: 0 28px;
+    background: var(--blue);
+    color: white;
+    font-family: 'Manrope', sans-serif;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: opacity 0.15s;
+  }
+
+  .inline-form button:hover { opacity: 0.85; }
+
+  .bottom-privacy {
+    font-size: 11px;
+    color: var(--ink-light);
+    margin-top: 12px;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--cream-dark);
+    padding: 40px 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--rule-strong);
+  }
+
+  .footer-left {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--ink-mid);
+  }
+
+  .footer-right {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--ink-light);
+  }
+
+  .footer-right a {
+    color: var(--ink-light);
+    text-decoration: none;
+  }
+
+  .footer-right a:hover { color: var(--ink); }
+
+  /* ── MOBILE ── */
+  @media (max-width: 768px) {
+    nav { padding: 0 24px; }
+    .nav-logo { font-size: 9px; letter-spacing: 2px; }
+
+    .hero {
+      grid-template-columns: 1fr;
+      padding: 120px 24px 60px 24px;
+      gap: 48px;
+      min-height: auto;
+    }
+
+    .hero-title { font-size: 48px; letter-spacing: -2px; }
+    .hero-sub { max-width: 100%; }
+    .form-card { padding: 32px 24px; }
+
+    .what, .about, .bottom-cta {
+      grid-template-columns: 1fr;
+      padding: 64px 24px;
+      gap: 48px;
+    }
+
+    .proof {
+      grid-template-columns: 1fr;
+      padding: 64px 24px;
+      gap: 40px;
+    }
+
+    .proof-item {
+      padding: 0;
+      border-right: none;
+      border-bottom: 1px solid rgba(245,242,236,0.08);
+      padding-bottom: 40px;
+    }
+
+    .proof-item:last-child { border-bottom: none; padding-bottom: 0; }
+
+    .section-title { font-size: 28px; }
+    .about-quote { font-size: 20px; }
+
+    .inline-form { flex-direction: column; }
+    .inline-form input { border-right: 1px solid var(--rule-strong); border-bottom: none; }
+    .inline-form button { width: 100%; }
+
+    footer {
+      flex-direction: column;
+      gap: 12px;
+      text-align: center;
+      padding: 32px 24px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/" class="nav-logo">The Confidence Reset</a>
+  <a href="#get-it" class="nav-cta">Get The Mini Reset</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <p class="hero-eyebrow">Free. Instant Access.</p>
+    <h1 class="hero-title">The<br>Mini<br><span class="accent">Reset<span style="color:#6BA3BE">.</span></span></h1>
+    <div class="hero-rule"></div>
+    <p class="hero-sub">A five-minute practice from <strong>The Confidence Reset</strong>, the book on what your nervous system is actually doing when confidence disappears, and how to change it.</p>
+  </div>
+
+  <div class="hero-right" id="get-it">
+    <div class="form-card">
+      <p class="form-card-label">Free Download</p>
+      <h2 class="form-card-title">Get The Mini Reset now</h2>
+      <p class="form-card-sub">Enter your details and we'll send it straight to your inbox. You'll also be first to know when the book launches.</p>
+
+      <!-- KIT FORM: replace with your embedded Kit form code -->
+      <form action="#" method="post">
+        <div class="form-field">
+          <label for="first-name">First name</label>
+          <input type="text" id="first-name" name="first_name" placeholder="Your first name" required>
+        </div>
+        <div class="form-field">
+          <label for="email">Email address</label>
+          <input type="email" id="email" name="email_address" placeholder="your@email.com" required>
+        </div>
+        <button type="submit" class="form-submit">Send me The Mini Reset</button>
+      </form>
+
+      <p class="form-privacy">No spam. Unsubscribe any time. Your details are never shared.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT IS IT -->
+<section class="what">
+  <div class="what-left">
+    <p class="section-label">What is this</p>
+    <h2 class="section-title">Confidence isn't a mindset. It's a body state.</h2>
+    <p class="body-text">Most approaches to confidence try to change how you think. The problem is that the nervous system doesn't respond to logic. It responds to signals from the body.</p>
+    <p class="body-text">The Mini Reset is a two-part practice that works directly with those signals. It takes five minutes. You can use it before a meeting, a difficult conversation, or any moment when the old contraction tends to show up.</p>
+    <p class="body-text">It's drawn directly from the work in <em>The Confidence Reset</em>, and it works whether you've heard of the book or not.</p>
+  </div>
+
+  <div class="what-right">
+    <div class="inside-item">
+      <span class="inside-num">01</span>
+      <div class="inside-text">
+        <strong>Why confidence disappears</strong>
+        <p>The biological reason the nervous system contracts, and why thinking your way out of it rarely works.</p>
+      </div>
+    </div>
+    <div class="inside-item">
+      <span class="inside-num">02</span>
+      <div class="inside-text">
+        <strong>The Four-Seven Breath</strong>
+        <p>A breath ratio that activates the vagus nerve and shifts your nervous system out of survival mode in under two minutes.</p>
+      </div>
+    </div>
+    <div class="inside-item">
+      <span class="inside-num">03</span>
+      <div class="inside-text">
+        <strong>The Expansion Reset</strong>
+        <p>Three physical actions that interrupt the contraction pattern at the source. Each takes three seconds. Nobody around you will notice.</p>
+      </div>
+    </div>
+    <div class="inside-item">
+      <span class="inside-num">04</span>
+      <div class="inside-text">
+        <strong>What just happened</strong>
+        <p>A plain-English explanation of what you just did to your nervous system, and what that means for the work ahead.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about">
+  <div class="about-left">
+    <p class="about-quote">"Confidence is not a personality trait. It is a <strong>biological state</strong>, and it can be rebuilt."</p>
+    <p class="about-meta">Christopher Murray, The Confidence Reset</p>
+  </div>
+  <div class="about-right">
+    <p class="section-label">About Christopher Murray</p>
+    <p class="body-text">Christopher Murray is a hypnotherapist and coach. He works with high-functioning professionals: people who are competent, often successful, and yet consistently pulled back by a version of themselves they can't access when it actually matters.</p>
+    <p class="body-text">The Confidence Reset is built on the framework he uses in sessions: a practical, neuroscience-grounded system for rebuilding confidence at its root, not as a performance, but as a default state.</p>
+    <p class="body-text">The book is coming soon. The Mini Reset is where it starts.</p>
+  </div>
+</section>
+
+<!-- PROOF -->
+<section class="proof">
+  <div class="proof-item">
+    <p class="proof-num">5<span>min</span></p>
+    <p class="proof-label">The complete practice takes five minutes and can be used anywhere.</p>
+  </div>
+  <div class="proof-item">
+    <p class="proof-num">2<span>steps</span></p>
+    <p class="proof-label">Two exercises. One works on the breath. One works on the body.</p>
+  </div>
+  <div class="proof-item">
+    <p class="proof-num">0<span>cost</span></p>
+    <p class="proof-label">Completely free. No catch. Just the work, delivered to your inbox.</p>
+  </div>
+</section>
+
+<!-- BOTTOM CTA -->
+<section class="bottom-cta">
+  <div class="bottom-cta-left">
+    <p class="section-label">Get started</p>
+    <h2 class="section-title">Get The Mini Reset free.</h2>
+    <p class="body-text">Enter your email and we'll send it straight to you. You'll also be first to know when <em>The Confidence Reset</em> launches and get early access to the companion course.</p>
+  </div>
+  <div class="bottom-cta-right">
+    <!-- KIT FORM: replace with your embedded Kit form code -->
+    <form action="#" method="post">
+      <div class="inline-form">
+        <input type="email" name="email_address" placeholder="your@email.com" required>
+        <button type="submit">Send it to me</button>
+      </div>
+    </form>
+    <p class="bottom-privacy">No spam. Unsubscribe any time.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-left">The Confidence Reset</span>
+  <span class="footer-right">
+    &copy; 2026 Christopher Murray &nbsp;&middot;&nbsp;
+    <a href="/">confidenceresetnow.com</a>
+  </span>
+</footer>
+
+</body>
+</html>
