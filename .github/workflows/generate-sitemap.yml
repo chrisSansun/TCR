@@ -15,7 +15,8 @@ jobs:
       - name: Generate sitemap.xml
         run: |
           BASE_URL="https://confidenceresetnow.com"
-          EXCLUDED=()
+          EXCLUDED=("confirmed.html" "privacy-policy.html")
+          PRIORITIES=("index.html:1.0" "mini-reset.html:0.8")
           OUTPUT="sitemap.xml"
           DATE=$(date +%Y-%m-%d)
 
@@ -44,11 +45,21 @@ jobs:
               url="$BASE_URL/${path%.html}"
             fi
 
+            priority="0.7"
+            for pair in "${PRIORITIES[@]}"; do
+              pfile="${pair%%:*}"
+              pval="${pair##*:}"
+              if [ "$filename" = "$pfile" ]; then
+                priority="$pval"
+                break
+              fi
+            done
+
             echo "  <url>" >> $OUTPUT
             echo "    <loc>$url</loc>" >> $OUTPUT
             echo "    <lastmod>$DATE</lastmod>" >> $OUTPUT
             echo "    <changefreq>monthly</changefreq>" >> $OUTPUT
-            echo "    <priority>0.8</priority>" >> $OUTPUT
+            echo "    <priority>$priority</priority>" >> $OUTPUT
             echo "  </url>" >> $OUTPUT
           done
 
