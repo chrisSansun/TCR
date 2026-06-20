@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Articles | The Confidence Reset</title>
+<link rel="canonical" href="https://confidenceresetnow.com/articles" />
+<meta name="description" content="Research-backed articles on confidence, the nervous system, and the patterns that keep high achievers stuck. From the world of The Confidence Reset.">
+<meta name="author" content="Christopher Murray">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Confidence Reset">
+<meta property="og:title" content="Articles | The Confidence Reset">
+<meta property="og:description" content="Research-backed articles on confidence, the nervous system, and the patterns that keep high achievers stuck.">
+<meta property="og:url" content="https://confidenceresetnow.com/articles">
+<meta property="og:image" content="https://confidenceresetnow.com/christopher-murray.png">
+<meta property="og:image:width" content="1400">
+<meta property="og:image:height" content="1050">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Articles | The Confidence Reset">
+<meta name="twitter:description" content="Research-backed articles on confidence, the nervous system, and the patterns that keep high achievers stuck.">
+<meta name="twitter:image" content="https://confidenceresetnow.com/christopher-murray.png">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream:       #F5F2EC;
+    --cream-mid:   #EDE9E1;
+    --cream-dark:  #E4DFD5;
+    --ink:         #0C0C0C;
+    --ink-mid:     #3A3734;
+    --ink-light:   #8C8680;
+    --blue:        #6BA3BE;
+    --blue-dark:   #2B5F7E;
+    --blue-pale:   #EBF3F8;
+    --rule:        rgba(12,12,12,0.09);
+    --rule-strong: rgba(12,12,12,0.18);
+  }
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Manrope', sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: 64px;
+    background: rgba(245,242,236,0.94);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 56px;
+    z-index: 100;
+  }
+
+  .nav-logo {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  .nav-cta {
+    display: inline-block;
+    background: var(--blue);
+    color: white;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 10px 22px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: opacity 0.15s;
+  }
+
+  .nav-cta:hover { opacity: 0.85; }
+
+  /* HERO */
+  .hero {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 140px 24px 0;
+    text-align: center;
+  }
+
+  .hero-eyebrow {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--blue-dark);
+    margin-bottom: 18px;
+  }
+
+  .hero h1 {
+    font-size: 2.6rem;
+    font-weight: 800;
+    letter-spacing: -1.2px;
+    line-height: 1.15;
+    color: var(--ink);
+    margin-bottom: 20px;
+  }
+
+  .hero p.sub {
+    font-size: 1.1rem;
+    color: var(--ink-mid);
+    max-width: 560px;
+    margin: 0 auto 8px;
+    line-height: 1.6;
+  }
+
+  .hero-count {
+    font-size: 13px;
+    color: var(--ink-light);
+    margin-top: 18px;
+  }
+
+  /* FILTER BAR */
+  .filter-bar {
+    max-width: 1100px;
+    margin: 44px auto 0;
+    padding: 0 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    position: sticky;
+    top: 64px;
+    background: rgba(245,242,236,0.96);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 50;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .filter-btn {
+    font-family: 'Manrope', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    color: var(--ink-mid);
+    background: var(--cream-mid);
+    border: 1px solid transparent;
+    padding: 10px 18px;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+    white-space: nowrap;
+  }
+
+  .filter-btn:hover { background: var(--cream-dark); }
+
+  .filter-btn.active {
+    background: var(--ink);
+    color: var(--cream);
+  }
+
+  .filter-count {
+    font-size: 11px;
+    opacity: 0.6;
+    margin-left: 6px;
+  }
+
+  /* GRID */
+  .grid-wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 48px 24px 100px;
+  }
+
+  .category-heading {
+    font-size: 1.1rem;
+    font-weight: 800;
+    letter-spacing: -0.2px;
+    color: var(--ink);
+    margin: 48px 0 20px;
+    padding-top: 8px;
+  }
+
+  .category-heading:first-child { margin-top: 0; }
+
+  .category-heading .count {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--ink-light);
+    margin-left: 8px;
+  }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+
+  .card {
+    display: block;
+    background: white;
+    border: 1px solid var(--rule);
+    padding: 24px 22px;
+    text-decoration: none;
+    color: var(--ink);
+    transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+  }
+
+  .card.is-live:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(12,12,12,0.08);
+    border-color: var(--rule-strong);
+  }
+
+  .card.is-locked {
+    cursor: default;
+    opacity: 0.5;
+    background: var(--cream-mid);
+  }
+
+  .card-tag {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--blue-dark);
+    background: var(--blue-pale);
+    padding: 4px 10px;
+    margin-bottom: 14px;
+  }
+
+  .card.is-locked .card-tag {
+    color: var(--ink-light);
+    background: var(--cream-dark);
+  }
+
+  .card-title {
+    font-size: 1.02rem;
+    font-weight: 700;
+    line-height: 1.35;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+
+  .card.is-locked .card-title { color: var(--ink-mid); }
+
+  .card-brief {
+    font-size: 0.88rem;
+    color: var(--ink-light);
+    line-height: 1.55;
+  }
+
+  .card-foot {
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px solid var(--rule);
+    font-size: 11px;
+    color: var(--ink-light);
+    font-weight: 700;
+    letter-spacing: 0.3px;
+  }
+
+  /* BOTTOM CTA */
+  .bottom-cta {
+    background: var(--ink);
+    padding: 64px 24px;
+    text-align: center;
+  }
+
+  .bottom-cta p.eyebrow {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 14px;
+  }
+
+  .bottom-cta h2 {
+    font-size: 1.7rem;
+    font-weight: 800;
+    color: var(--cream);
+    margin-bottom: 14px;
+    letter-spacing: -0.4px;
+  }
+
+  .bottom-cta p.sub {
+    font-size: 1rem;
+    color: rgba(245,242,236,0.65);
+    margin-bottom: 28px;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .bottom-cta-btn {
+    display: inline-block;
+    background: var(--blue);
+    color: white;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 16px 36px;
+  }
+
+  .bottom-cta-btn:hover { opacity: 0.88; color: white; }
+
+  footer {
+    background: var(--cream-dark);
+    padding: 40px 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--rule-strong);
+  }
+
+  .footer-left { font-size: 11px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: var(--ink-mid); }
+  .footer-right { font-size: 11px; font-weight: 500; color: var(--ink-light); }
+  .footer-right a { color: var(--ink-light); text-decoration: none; }
+  .footer-right a:hover { color: var(--ink); }
+
+  @media (max-width: 900px) {
+    .card-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 640px) {
+    nav { padding: 0 20px; }
+    .nav-logo { font-size: 9px; letter-spacing: 2px; }
+    .hero { padding: 110px 20px 0; }
+    .hero h1 { font-size: 1.9rem; }
+    .filter-bar { top: 56px; padding: 16px 20px; justify-content: flex-start; overflow-x: auto; }
+    .card-grid { grid-template-columns: 1fr; }
+    footer { flex-direction: column; gap: 12px; text-align: center; padding: 32px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">The Confidence Reset</a>
+  <a href="/mini-reset" class="nav-cta">Get The Mini Reset</a>
+</nav>
+
+<div class="hero">
+  <p class="hero-eyebrow">The Confidence Reset Library</p>
+  <h1>Articles on confidence, the nervous system, and the patterns that keep you stuck</h1>
+  <p class="sub">Research-backed, drawn directly from the book. No affirmations, no mindset slogans, just the biology of confidence and what actually changes it.</p>
+  <p class="hero-count"><span id="visible-count">63</span> articles across 6 categories</p>
+</div>
+
+<div class="filter-bar" id="filter-bar">
+  <button class="filter-btn active" data-filter="all">All <span class="filter-count">63</span></button>
+  <button class="filter-btn" data-filter="neuroscience">The Neuroscience of Confidence <span class="filter-count">12</span></button>
+  <button class="filter-btn" data-filter="identity">Identity and Self-Image <span class="filter-count">10</span></button>
+  <button class="filter-btn" data-filter="performance">High Performance and Self-Doubt <span class="filter-count">10</span></button>
+  <button class="filter-btn" data-filter="protectors">The Five Protectors <span class="filter-count">7</span></button>
+  <button class="filter-btn" data-filter="tools">Tools and Practices <span class="filter-count">14</span></button>
+  <button class="filter-btn" data-filter="leaders">For Leaders and Teams <span class="filter-count">10</span></button>
+</div>
+
+<div class="grid-wrap" id="grid-wrap">
+
+  <h2 class="category-heading" data-section="neuroscience">The Neuroscience of Confidence <span class="count">12</span></h2>
+  <div class="card-grid" data-section-grid="neuroscience">
+    <a href="/why-confidence-is-a-biological-state" class="card is-live" data-category="neuroscience">
+      <span class="card-tag">Neuroscience</span>
+      <div class="card-title">Why Confidence Is a Biological State, Not a Mindset</div>
+      <div class="card-brief">Confidence is a nervous system condition, not a personality trait. Here's the biology behind why willpower alone can't build it.</div>
+      <div class="card-foot">7 min read</div>
+    </a>
+    <div class="card is-locked" data-category="neuroscience">
+      <span class="card-tag">Neuroscience</span>
+      <div class="card-title">What the Vagus Nerve Has to Do With Confidence</div>
+      <div class="card-brief">The vagus nerve's role in regulating the body's threat response, and why breath work targets it directly.</div>
+      <div class="card-foot">Coming soon</div>
+    </div>
+    <div class="card is-locked" data-category="neuroscience">
+      <span class="card-tag">Neuroscience</span>
+      <div class="card-title">Interoception: How Your Body Talks to Your Brain About Safety</div>
+      <div class="card-brief">The feedback loop between body sensation and brain interpretation that underlies every confidence pattern.</div>
+      <div class="card-foot">Coming soon</div>
+    </div>
+    <div class="card is-locked" data-category="neuroscience">
+      <span class="card-tag">Neuroscience</span>
+      <div class="card-title">The Window of Tolerance, Explained</div>
+      <div class="card-brief">Why high achievers often operate just outside their window of tolerance without realising it.</div>
+      <div class="card-foot">Coming soon</div>
+    </div>
+    <div class="card is-locked" data-category="neuroscience">
+      <span class="card-tag">Neuroscience</span>
+      <div class="card-title">Why Willpower Cannot Override a Nervous System in Threat</div>
+      <div class="card-brief">Why thinking your way to confidence fails when the body still registers danger.</div>
+      <div class="card-foot">Coming soon</div>
+    </div>
+    <div class="card is-locked" data-category="neuroscience">
+      <span class="card-tag">Neuroscience</span>
+      <div class="card-title">Neuroception: How Your Body Decides You're Unsafe Before You Know It</div>
+      <div class="card-brief">The unconscious scanning system behind social anxiety and freeze responses.</div>
+      <div class="card-foot">Coming soon</div>
+    </div>
+    <div class="card is-locked" data-category="neuroscience">
+      <span class="card-tag">Neuroscience</span>
+      <div class="card-title">Prediction Error and Why Confidence Is Built on Surprise</div>
+      <div class="card-brief">How the brain updates fear responses only when reality contradicts its prediction.</div>
+      <div class="card-foot">Coming soon</div>
+    </div>
+    <div class="card is-locked" data-category="neuroscience">
+      <span class="card-tag">Neuroscience</span>
+      <div class="card-title">Memory Reconsolidation: How the Brain Updates Old Fear</div>
+      <div class="card-brief">The neuroscience of how old fear memories can be updated rather than just managed.</div>
+      <div class="card-foot">Coming soon</div>
+    </div>
+    <div class="card is-locked" data-category="neuroscience">
+      <span class="card-tag">Neuroscience</span>
+      <div class="card-title">The Social Engagement System and Why Connection Calms Fear</div>
+      <div class="card-brief">Porges' social engagement system, and why human contact regulates the nervous system faster than self-talk.</div>
+      <div class="card-foot">Coming soon</div>
+    </div>
+    <div class="card is-locked" data-category="neuroscience">
+      <span class="card-tag">Neuroscience</span>
+      <div class="card-title">Why the Amygdala Cannot Tell the Difference Between Rejection and Danger</div>
+      <div class="card-brief">Why public speaking and social risk trigger the same ancient alarm as physical threat.</div>
+      <div class="card-foot">Coming soon</div>
+    </div>
+    <div class="card is-locked" data-category="neuroscience">
+      <span class="card-tag">Neuroscience</span>
+      <div class="card-title">Autonomic Synchrony: Why Calm People Change a Room</div>
+      <div class="card-brief">The research on co-regulation, and why one calm nervous system can settle a whole room.</div>
+      <div class="card-foot">Coming soon</div>
+    </div>
+    <div class="card is-locked" data-category="neuroscience">
+      <span class="card-tag">Neuroscience</span>
+      <div class="card-title">The Solomon Paradox: Why We're Wiser About Others Than Ourselves</div>
+      <div class="card-brief">The documented gap between the wisdom we dispense and our ability to apply it to ourselves.</div>
+      <div class="card-foot">Coming soon</div>
+    </div>
+  </div>
+
+  <h2 class="category-heading" data-section="identity">Identity and Self-Image <span class="count">10</span></h2>
+  <div class="card-grid" data-section-grid="identity">
+    <div class="card is-locked" data-category="identity">
+      <span class="card-tag">Identity</span>
+      <div class="card-title">The Early Code: How Childhood Writes Your Adult Confidence</div>
+      <div class="card-brief">How childhood feedback becomes the adult operating system that runs your confidence for decades.</div>
+      <div class="card-foot">Coming soon</div>
+    </div>
+    <div class="card is-locked" data-category="identity">
+      <span class="card-tag">Identity</span>
+      <div class="card-title">The Inner Critic Is Not Your Enemy, It's a Frightened Employee</div>
+      <div class="card-brief">Reframing the inner critic as an outdated protector rather than an opponent to silence.</div>
+      <div class="card-foot">Coming soon</div>
+    </div>
+    <div class="card is-locked" data-category="identity">
+      <span class="card-tag">Identity</span>
+      <div class="card-title">Why Logic Doesn't Work on Self-Doubt</div>
+      <div class="card-brief">Why reasoning with the inner critic fails, because it operates on sensation, not argument.</div>
+      <div class="card-foot">Coming soon</div>
+    </div>
+    <div class="card is-locked" data-category="identity">
+      <span class="card-tag">Identity</span>
+      <div class="card-title">The Voice Journal: Decoding Where Self-Criticism Comes From</div>
+      <div class="card-brief">A practice for tracing self-critical language back to its protector type.</div>
+      <div class="card-foot">Coming soon</div>
+    </div>
+    <div class="card is-locked" data-category="identity">
+      <span class="card-tag">Identity</span>
+      <div class="card-title">Future Self Integration: Why Visualisation Needs a Body That Believes It</div>
+      <div class="card-brief">Why visualisation only works once the body feels safe enough to believe it.</div>
+      <div class="card-foot">Coming soon</div>
+    </div>
+    <div class="card is-locked" data-category="identity">
+      <span class="card-tag">Identity</span>
+      <div class="card-title">The Future Self Rehearsal, Explained</div>
+      <div class="card-brief">A step-by-step look at the Future Self Rehearsal and Three Scene Rehearsal practices.</div>
+      <div class="card-foot">Coming soon</div>
+    </div>
+    <div class="card is-locked" data-category="identity">
+      <span class="card-tag">Identity</span>
+      <div class="card-title">Why High Achievers Still Feel Like Frauds</div>
+      <div class="card-brief">The gap between competence and self-perception in high-functioning professionals.</div>
+      <div class="card-foot">Coming soon</div>
+    </div>
+    <a href="/the-psychology-of-worth" class="card is-live" data-category="identity">
+      <span class="card-tag">Identity</span>
+      <div class="card-title">The Psychology of Worth: Building Value That Doesn't Depend on Output</div>
+      <div class="card-brief">Worth isn't earned through achievement. It's a felt sense the body either permits or withholds.</div>
+      <div class="card-foot">8 min read</div>
+    </a>
+    <div class="card is-locked" data-category="identity">
+      <span class="card-tag">Identity</span>
+      <div class="card-title">Impostor Syndrome Isn't a Confidence Problem</div>
+      <div class="card-brief">Reframing impostor syndrome as a worth problem rather than a skills or confidence deficit.</div>
+      <div class="card-foot">Coming soon</div>
+    </div>
+    <div class="card is-locked" data-category="identity">
+      <span class="card-tag">Identity</span>
+      <div class="card-title">Worth Inventory: Taking Stock of Where Your Value Actually Comes From</div>
+      <div class="card-brief">A practice for separating self-worth from achievement, one inventory at a time.</div>
+      <div class="card-foot">Coming soon</div>
+    </div>
+  </div>
+
+  <h2 class="category-heading" data-section="performance">High Performance and Self-Doubt <span class="count">10</span></h2>
+  <div class="card-grid" data-section-grid="performance">
+    <a href="/why-successful-people-doubt-themselves" class="card is-live" data-category="performance">
+      <span class="card-tag">Performance</span>
+      <div class="card-title">Why Successful People Privately Doubt Themselves</div>
+      <div class="card-brief">Achievement and self-doubt can coexist for years. Here's why external success rarely closes the internal gap.</div>
+      <div class="card-foot">8 min read</div>
+    </a>
+    <div class="card is-locked" data-category="performance">
+      <span class="card-tag">Performance</span>
+      <div class="card-title">The Gap Between External Success and Internal Experience</div>
+      <div class="card-brief">Why visible achievement doesn't update the nervous system's underlying sense of safety.</div>
+      <div class="card-foot">Coming soon</div>
+    </div>
+    <div class="card is-locked" data-category="performance">
+      <span class="card-tag">Performance</span>
+      <div class="card-title">Confidence in Action: Why Insight Alone Doesn't Change Behaviour</div>
+      <div class="card-brief">Understanding the critic is necessary but not sufficient without embodied practice.</div>
+      <div class="card-foot">Coming soon</div>
+    </div>
+    <div class="card is-locked" data-category="performance">
+      <span class="card-tag">Performance</span>
+      <div class="card-title">Why Affirmations Don't Work for High Achievers</div>
+      <div class="card-brief">Why sophisticated, analytical readers reject affirmations, and what works instead.</div>
+      <div class="card-foot">Coming soon</div>
+    </div>
+    <div class="card is-locked" data-category="performance">
+      <span class="card-tag">Performance</span>
+      <div class="card-title">Boundaries and Energy: The Hidden Cost of People-Pleasing at the Top</div>
+      <div class="card-brief">The link between boundaries, energy management, and sustained high performance.</div>
+      <div class="card-foot">Coming soon</div>
+    </div>
+    <div class="card is-locked" data-category="performance">
+      <span class="card-tag">Performance</span>
+      <div class="card-title">Resilience and Reset: Turning Criticism Into Data</div>
+      <div class="card-brief">A reframe of failure and feedback as information rather than verdict.</div>
+      <div class="card-foot">Coming soon</div>
+    </div>
+    <div class="card is-locked" data-category="performance">
+      <span class="card-tag">Performance</span>
+      <div class="card-title">The Recovery Map: Building a System for Bouncing Back</div>
+      <div class="card-brief">A structured tool for post-setback recovery, built from real client work.</div>
+      <div class="card-foot">Coming soon</div>
+    </div>
+    <div class="card is-locked" data-category="performance">
+      <span class="card-tag">Performance</span>
+      <div class="card-title">Exam Breath: A Tool for High-Stakes Performance Moments</div>
+      <div class="card-brief">A breathing practice for pressure moments like presentations, negotiations, and exams.</div>
+      <div class="card-foot">Coming soon</div>
+    </div>
+    <div class="card is-locked" data-category="performance">
+      <span class="card-tag">Performance</span>
+      <div class="card-title">One Brave Thing a Day: Micro-Exposure for High Achievers</div>
+      <div class="card-brief">The prediction-error logic behind small daily exposure, and how to use it.</div>
+      <div class="card-foot">Coming soon</div>
+    </div>
+    <div class="card is-locked" data-category="performance">
+      <span class="card-tag">Performance</span>
+      <div class="card-title">Why Rest Feels Dangerous to High Performers</div>
+      <div class="card-brief">The Taskmaster protector, and why stopping feels like risk to driven professionals.</div>
+      <div class="card-foot">Coming soon</div>
+    </div>
+  </div>
+
+  <h2 class="category-heading" data-section="protectors">The Five Protectors <span class="count">7</span></h2>
+  <div class="card-grid" data-section-grid="protectors">
+    <div class="card is-locked" data-category="protectors">
+      <span class="card-tag">Protectors</span>
+      <div class="card-title">The Perfectionist: When Flawless Becomes a Survival Strategy</div>
+      <div class="card-brief">A deep dive on the Perfectionist protector and its origin in conditional approval.</div>
+      <div class="card-foot">Coming soon</div>
+    </div>
+    <div class="card is-locked" data-category="protectors">
+      <span class="card-tag">Protectors</span>
+      <div class="card-title">The Taskmaster: Why Rest Feels Like Weakness</div>
+      <div class="card-brief">A deep dive on the Taskmaster protector and its roots in households where rest was criticised.</div>
+      <div class="card-foot">Coming soon</div>
+    </div>
+    <div class="card is-locked" data-category="protectors">
+      <span class="card-tag">Protectors</span>
+      <div class="card-title">The Historian: When Memory Becomes Prophecy</div>
+      <div class="card-brief">A deep dive on the Historian protector, which treats past pain as a prediction of the future.</div>
+      <div class="card-foot">Coming soon</div>
+    </div>
+    <div class="card is-locked" data-category="protectors">
+      <span class="card-tag">Protectors</span>
+      <div class="card-title">The Comparer: Guarding Against Exclusion by Measuring Everyone Else</div>
+      <div class="card-brief">A deep dive on the Comparer protector and its roots in environments where worth was relative.</div>
+      <div class="card-foot">Coming soon</div>
+    </div>
+    <div class="card is-locked" data-category="protectors">
+      <span class="card-tag">Protectors</span>
+      <div class="card-title">The Pleaser: Mistaking Peacekeeping for Love</div>
+      <div class="card-brief">A deep dive on the Pleaser protector and its connection to boundaries at work.</div>
+      <div class="card-foot">Coming soon</div>
+    </div>
+    <a href="/which-protector-type-are-you" class="card is-live" data-category="protectors">
+      <span class="card-tag">Protectors</span>
+      <div class="card-title">Which Protector Type Are You? A Guide to the Five Patterns</div>
+      <div class="card-brief">The Perfectionist, the Taskmaster, the Historian, the Comparer, the Pleaser. How to recognise yours.</div>
+      <div class="card-foot">8 min read</div>
+    </a>
+    <div class="card is-locked" data-category="protectors">
+      <span class="card-tag">Protectors</span>
+      <div class="card-title">How the Five Protectors Form in Childhood</div>
+      <div class="card-brief">The developmental origins common to all five protector types.</div>
+      <div class="card-foot">Coming soon</div>
+    </div>
+  </div>
+
+  <h2 class="category-heading" data-section="tools">Tools and Practices <span class="count">14</span></h2>
+  <div class="card-grid" data-section-grid="tools">
+    <a href="/the-four-seven-breath-extended-exhale" class="card is-live" data-category="tools">
+      <span class="card-tag">Tools</span>
+      <div class="card-title">The Four-Seven Breath: Why Extended Exhale Calms the Body</div>
+      <div class="card-brief">A longer exhale than inhale measurably shifts your nervous system from alert to regulated.</div>
+      <div class="card-foot">7 min read</div>
+    </a>
+    <div class="card is-locked" data-category="tools">
+      <span class="card-tag">Tools</span>
+      <div class="card-title">Grounding: The Fastest Way Back to Safety</div>
+      <div class="card-brief">A foundational practice for returning the body to a felt sense of safety.</div>
+      <div class="card-foot">Coming soon</div>
+    </div>
+    <div class="card is-locked" data-category="tools">
+      <span class="card-tag">Tools</span>
+      <div class="card-title">The Anchor Gesture: Building a Physical Shortcut to Calm</div>
+      <div class="card-brief">How to build a physical anchor that triggers calm on demand through repeated pairing.</div>
+      <div class="card-foot">Coming soon</div>
+    </div>
+    <div class="card is-locked" data-category="tools">
+      <span class="card-tag">Tools</span>
+      <div class="card-title">The Posture Inventory: What Your Body Is Telling You</div>
+      <div class="card-brief">The Posture Inventory exercise and the posture feedback loop behind it.</div>
+      <div class="card-foot">Coming soon</div>
+    </div>
+    <div class="card is-locked" data-category="tools">
+      <span class="card-tag">Tools</span>
+      <div class="card-title">The Grounding Walk, Explained</div>
+      <div class="card-brief">A step-by-step walkthrough of the Grounding Walk practice for high-stakes moments.</div>
+      <div class="card-foot">Coming soon</div>
+    </div>
+    <div class="card is-locked" data-category="tools">
+      <span class="card-tag">Tools</span>
+      <div class="card-title">Cold Exposure and Confidence: What the Research Actually Shows</div>
+      <div class="card-brief">The research on cold exposure and nervous system regulation.</div>
+      <div class="card-foot">Coming soon</div>
+    </div>
+    <div class="card is-locked" data-category="tools">
+      <span class="card-tag">Tools</span>
+      <div class="card-title">The Pre-Meeting Reset: A 60-Second Practice Before High-Stakes Moments</div>
+      <div class="card-brief">A 60-second routine combining breath, hum, ground, and speech before anything important.</div>
+      <div class="card-foot">Coming soon</div>
+    </div>
+    <div class="card is-locked" data-category="tools">
+      <span class="card-tag">Tools</span>
+      <div class="card-title">The Humming Reset: Why Vocal Tone Calms the Nervous System</div>
+      <div class="card-brief">The vagal mechanics behind humming as a vocal regulation tool.</div>
+      <div class="card-foot">Coming soon</div>
+    </div>
+    <div class="card is-locked" data-category="tools">
+      <span class="card-tag">Tools</span>
+      <div class="card-title">The Throat Awareness Scan: Why Your Voice Closes Under Pressure</div>
+      <div class="card-brief">The somatic link between throat tension and suppressed self-expression.</div>
+      <div class="card-foot">Coming soon</div>
+    </div>
+    <div class="card is-locked" data-category="tools">
+      <span class="card-tag">Tools</span>
+      <div class="card-title">Affect Labelling: Why Naming a Feeling Changes It</div>
+      <div class="card-brief">The research and practice of naming emotional states to reduce their intensity.</div>
+      <div class="card-foot">Coming soon</div>
+    </div>
+    <div class="card is-locked" data-category="tools">
+      <span class="card-tag">Tools</span>
+      <div class="card-title">The Evening Audit: A Nightly Practice for Resetting the Nervous System</div>
+      <div class="card-brief">A nightly nervous system reset, built around noticing rather than fixing.</div>
+      <div class="card-foot">Coming soon</div>
+    </div>
+    <div class="card is-locked" data-category="tools">
+      <span class="card-tag">Tools</span>
+      <div class="card-title">The Completion Ritual: Why Unfinished Tasks Drain Confidence</div>
+      <div class="card-brief">Why open loops keep the nervous system on alert long after the task is forgotten.</div>
+      <div class="card-foot">Coming soon</div>
+    </div>
+    <div class="card is-locked" data-category="tools">
+      <span class="card-tag">Tools</span>
+      <div class="card-title">The Neutral No: A Boundary Script for People-Pleasers</div>
+      <div class="card-brief">A script for setting boundaries without over-explaining or apologising.</div>
+      <div class="card-foot">Coming soon</div>
+    </div>
+    <div class="card is-locked" data-category="tools">
+      <span class="card-tag">Tools</span>
+      <div class="card-title">The Micro-Evidence Practice: Building Confidence Through Small Proof</div>
+      <div class="card-brief">Small proof points that update the nervous system over time, one piece of evidence at a time.</div>
+      <div class="card-foot">Coming soon</div>
+    </div>
+  </div>
+
+  <h2 class="category-heading" data-section="leaders">For Leaders and Teams <span class="count">10</span></h2>
+  <div class="card-grid" data-section-grid="leaders">
+    <div class="card is-locked" data-category="leaders">
+      <span class="card-tag">Leaders</span>
+      <div class="card-title">Why Calm Is Contagious: Co-Regulation in Leadership</div>
+      <div class="card-brief">Autonomic synchrony, and why a leader's nervous system state sets the tone for the room.</div>
+      <div class="card-foot">Coming soon</div>
+    </div>
+    <div class="card is-locked" data-category="leaders">
+      <span class="card-tag">Leaders</span>
+      <div class="card-title">The Confidence Gap Between Senior Leaders and Their Teams</div>
+      <div class="card-brief">Why seniority doesn't close the internal experience gap this book is built around.</div>
+      <div class="card-foot">Coming soon</div>
+    </div>
+    <div class="card is-locked" data-category="leaders">
+      <span class="card-tag">Leaders</span>
+      <div class="card-title">Why Your Team Mirrors Your Nervous System, Not Your Strategy</div>
+      <div class="card-brief">Co-regulation research applied directly to team dynamics and culture.</div>
+      <div class="card-foot">Coming soon</div>
+    </div>
+    <div class="card is-locked" data-category="leaders">
+      <span class="card-tag">Leaders</span>
+      <div class="card-title">Relational Patterns at Work: The Fixer, the Performer, the Avoider</div>
+      <div class="card-brief">How relational patterns from the book show up in everyday professional dynamics.</div>
+      <div class="card-foot">Coming soon</div>
+    </div>
+    <div class="card is-locked" data-category="leaders">
+      <span class="card-tag">Leaders</span>
+      <div class="card-title">The Repair Pause: Recovering Trust After a Difficult Moment</div>
+      <div class="card-brief">A practice for recovering connection after conflict or rupture at work.</div>
+      <div class="card-foot">Coming soon</div>
+    </div>
+    <div class="card is-locked" data-category="leaders">
+      <span class="card-tag">Leaders</span>
+      <div class="card-title">How to Lead a Team of Perfectionists</div>
+      <div class="card-brief">Applying the Perfectionist protector framework to managing high-achieving teams.</div>
+      <div class="card-foot">Coming soon</div>
+    </div>
+    <div class="card is-locked" data-category="leaders">
+      <span class="card-tag">Leaders</span>
+      <div class="card-title">The Daily Activation: A Leadership Practice for Presence Before Performance</div>
+      <div class="card-brief">A pre-performance grounding ritual built specifically for leaders.</div>
+      <div class="card-foot">Coming soon</div>
+    </div>
+    <div class="card is-locked" data-category="leaders">
+      <span class="card-tag">Leaders</span>
+      <div class="card-title">Boundaries at the Top: Why Leaders Burn Out on People-Pleasing</div>
+      <div class="card-brief">The Pleaser protector and boundary-setting tools, applied to senior leadership burnout.</div>
+      <div class="card-foot">Coming soon</div>
+    </div>
+    <div class="card is-locked" data-category="leaders">
+      <span class="card-tag">Leaders</span>
+      <div class="card-title">Confidence Is a Team Skill, Not Just a Personal One</div>
+      <div class="card-brief">A reframe of confidence work as a collective, not purely individual, responsibility.</div>
+      <div class="card-foot">Coming soon</div>
+    </div>
+    <div class="card is-locked" data-category="leaders">
+      <span class="card-tag">Leaders</span>
+      <div class="card-title">Building a Culture of Psychological Safety, One Nervous System at a Time</div>
+      <div class="card-brief">Connecting the book's safety-before-strategy principle to organisational culture.</div>
+      <div class="card-foot">Coming soon</div>
+    </div>
+  </div>
+
+</div>
+
+<div class="bottom-cta">
+  <p class="eyebrow">New Here?</p>
+  <h2>Start with the five-minute version</h2>
+  <p class="sub">The Mini Reset is a free practice drawn directly from the book. It's the fastest way to feel what this work actually does.</p>
+  <a href="/mini-reset" class="bottom-cta-btn">Get The Mini Reset Free</a>
+</div>
+
+<footer>
+  <span class="footer-left">The Confidence Reset</span>
+  <span class="footer-right">
+    &copy; 2026 Christopher Murray &nbsp;&middot;&nbsp;
+    <a href="/">confidenceresetnow.com</a>
+  </span>
+</footer>
+
+<script>
+  var filterBtns = document.querySelectorAll('.filter-btn');
+  var sections = document.querySelectorAll('[data-section]');
+  var sectionGrids = document.querySelectorAll('[data-section-grid]');
+  var visibleCount = document.getElementById('visible-count');
+
+  var counts = { all: 63, neuroscience: 12, identity: 10, performance: 10, protectors: 7, tools: 14, leaders: 10 };
+
+  filterBtns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      filterBtns.forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      var filter = btn.getAttribute('data-filter');
+
+      sections.forEach(function(heading) {
+        var section = heading.getAttribute('data-section');
+        var grid = document.querySelector('[data-section-grid="' + section + '"]');
+        if (filter === 'all' || filter === section) {
+          heading.style.display = '';
+          grid.style.display = '';
+        } else {
+          heading.style.display = 'none';
+          grid.style.display = 'none';
+        }
+      });
+
+      visibleCount.textContent = counts[filter];
+    });
+  });
+</script>
+
+</body>
+</html>

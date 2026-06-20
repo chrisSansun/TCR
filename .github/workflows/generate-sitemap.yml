@@ -16,7 +16,7 @@ jobs:
         run: |
           BASE_URL="https://confidenceresetnow.com"
           EXCLUDED=("confirmed.html" "privacy-policy.html")
-          PRIORITIES=("index.html:1.0" "mini-reset.html:0.8")
+          PRIORITIES=("index.html:1.0" "mini-reset.html:0.8" "articles.html:0.8")
           OUTPUT="sitemap.xml"
           DATE=$(date +%Y-%m-%d)
 
